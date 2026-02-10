@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", Arial;
+  font-weight: 400;
+  background: #f2f2f2;
+  padding: 20px;
+}
+
+#nome {
+  font-size: 1.5em;
+}
+
+.gap20 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.opensansextrabold {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+#btn-pdf {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#curriculo {
+  max-width: 900px;
+  background: white;
+  margin: auto;
+  padding: 35px;
+  box-shadow: none;
+}
+
+#formacao {
+  padding-top: 20px;
+}
+
+#marcos, #habilidades {
+  padding-top: 20px;
+}
+
+.header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header img {
+  width: 120px;
+  border-radius: 1px;
+}
+
+h1 {
+  font-weight: bolder;
+  margin: 0;
+  page-break-inside: avoid;
+}
+
+section {
+  margin-top: 30px;
+}
+
+h2 {
+  font-weight: bolder;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  page-break-inside: avoid;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.item {
+  margin-top: 15px;
+  line-height: 1.6;
+  page-break-inside: avoid;
+}
+
+.item strong {
+  display: block;
+  font-weight: bold;
+  font-size: larger;
+  margin-bottom: 3px;
+}
