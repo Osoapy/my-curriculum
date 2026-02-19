@@ -59,7 +59,7 @@ const curriculo = {
       descricao: "Apresentando a linguagem Lua desde os seus conceitos mais básicos até o consumo de APIs."
     },
     {
-      titulo: "Concluinte do ciclo do Pré Intermediate 3 do curso More English",
+      titulo: "Concluinte do ciclo Pré Intermediate 3 do curso More English",
       periodo: "Carga horária: 360 horas. 2018 - 2019",
       descricao: "Aprendendo inglês de forma lúdica, com foco em conversação e compreensão oral."
     }
