@@ -67,6 +67,7 @@ const curriculo = {
 
   marcos: [
     "Medalhista de bronze na 25ª Olimpíada Brasileira de Astronomia e Astronáutica",
+    "Equipe 2º lugar no Ideathon do Startup Day 2026, financiado pelo Sebrae Startups",
     "Equipe 2º lugar no Hackathon do IV SertãoComp, financiado pelo IFPB e a prefeitura de Cajazeiras",
     "Participação das edições IV e V SertãoComp, evento de tecnologia e inovação do IFPB",
     "Minicurso Hyperledger Fabric: Hiperledger Fabric: Primeiros passos com Blockchain",
