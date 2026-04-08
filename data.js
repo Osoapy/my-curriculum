@@ -3,8 +3,8 @@ const curriculo = {
   foto: "foto.jpg",
   info: `
     Idade: 20 anos<br>
-    Telefone: (83) 99408-5691<br>
-    Email: oosoapy@gmail.com<br>
+    Telefone: +55 (83) 99408-5691<br>
+    Email: joaogabriel61.cz@gmail.com<br>
     Endereço: Rua Francisca Fernandes Claudino, 440 - Cajazeiras, Paraíba, Brasil
   `,
 
