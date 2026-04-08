@@ -49,6 +49,11 @@ const curriculo = {
 
   extracurricular: [
     {
+      titulo: "Concluinte do ciclo Pré Intermediate 3 do curso More English",
+      periodo: "Carga horária: 360 horas. 2018 - 2019",
+      descricao: "Aprendendo inglês de forma lúdica, com foco em conversação e compreensão oral."
+    },
+    {
       titulo: "Monitor voluntário – Algoritmos e Lógica de Programação",
       periodo: "Carga horária: 6 horas semanais. 11/2024 – 05/2025",
       descricao: "Auxiliar alunos a obter o conhecimento necessário para a cadeira de Algoritmos e Lógica de programação, envolvendo aulas, resoluções de questões e até mesmo prototipação de algoritmos."
@@ -58,11 +63,6 @@ const curriculo = {
       periodo: "Carga horária para os alunos: 2 horas. 12/2024",
       descricao: "Apresentando a linguagem Lua desde os seus conceitos mais básicos até o consumo de APIs."
     },
-    {
-      titulo: "Concluinte do ciclo Pré Intermediate 3 do curso More English",
-      periodo: "Carga horária: 360 horas. 2018 - 2019",
-      descricao: "Aprendendo inglês de forma lúdica, com foco em conversação e compreensão oral."
-    }
   ],
 
   marcos: [
@@ -77,7 +77,7 @@ const curriculo = {
     "Participação do clube de leitura do Colégio Nossa Senhora de Lourdes",
     "Certificados de \"Redações + Tops\" na primeira, segunda e terceira edição do concurso de simulados do Colégio Nossa Senhora de Lourdes",
     "1º lugar no Campeonato Interno de Xadrez (Categoria A) nas edições de 2017, 2018 e 2019",
-    "Criação de projetos extracurriculares, disponível em: https://github.com/Osoapy"
+    "Criação de projetos extracurriculares, disponível em: https://github.com/Osoapy",
   ],
 
   habilidades: [
