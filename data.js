@@ -84,7 +84,7 @@ const curriculo = {
     "Português (Nativo)",
     "Inglês (Avançado)",
     "Espanhol (Intermediário)",
-    "Francês (Básico)",
+    "Libras (Básico)",
     "Entusiasta em TI e IA",
     "Pensamento estratégico",
     "Fácil adaptação",
