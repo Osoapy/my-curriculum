@@ -55,13 +55,17 @@ curriculo.habilidades.forEach(h => {
 
 // Exportar PDF
 document.getElementById("btn-pdf").addEventListener("click", () => {
-  html2pdf()
-    .set({
-      margin: 10,
-      filename: "Curriculo_Joao_Gabriel.pdf",
-      html2canvas: { scale: 2 },
+  window.scrollTo(0, 0);
+  setTimeout(() => {
+    html2pdf()
+      .set({
+        margin: 10,
+        filename: "Curriculo_Joao_Gabriel.pdf",
+        image: { type: 'jpg', quality: 1 },
+        html2canvas: { scale: 2 },
       jsPDF: { format: "a4", orientation: "portrait" }
     })
     .from(document.getElementById("curriculo"))
     .save();
+  }, 610);
 });

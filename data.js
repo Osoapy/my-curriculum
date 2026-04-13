@@ -1,11 +1,11 @@
 const curriculo = {
   nome: "João Gabriel Vieira Silva",
-  foto: "foto.jpg",
+  foto: "foto.png",
   info: `
     Idade: 20 anos<br>
     Telefone: +55 (83) 99408-5691<br>
     Email: joaogabriel61.cz@gmail.com<br>
-    Endereço: Rua Francisca Fernandes Claudino, 440 - Cajazeiras, Paraíba, Brasil
+    Endereço: Rua Francisca Fernandes Claudino, 440 - Cajazeiras/PB, Brasil<br>
   `,
 
   formacao: [
