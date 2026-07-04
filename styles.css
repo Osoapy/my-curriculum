@@ -5,6 +5,12 @@
   scroll-behavior: smooth;
 }
 
+@media print {
+    #btn-pdf {
+        display: none !important;
+    }
+}
+
 body {
   font-family: "Open Sans", Arial;
   font-weight: 400;
@@ -53,7 +59,10 @@ body {
   max-width: 900px;
   background: white;
   margin: auto;
-  padding: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   box-shadow: none;
 }
 
@@ -99,14 +108,15 @@ h2 {
   page-break-inside: avoid;
 }
 
-ul {
-  padding-left: 20px;
+.item, .item-menor, .item-menor-bullet {
+  padding-left: 10px;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .item {
   margin-top: 15px;
   line-height: 1.6;
-  page-break-inside: avoid;
 }
 
 .item strong {
@@ -114,4 +124,20 @@ ul {
   font-weight: bold;
   font-size: larger;
   margin-bottom: 3px;
+}
+
+.item-menor-bullet {
+  line-height: 1.6;
+}
+
+.quote {
+  border-left: 4px solid #949ba4;
+  padding-left: 6px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  white-space: pre-wrap;
+}
+
+.heavier-font-weight {
+  font-weight: 500;
 }

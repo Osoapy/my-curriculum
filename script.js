@@ -6,19 +6,20 @@ document.getElementById("foto").src = curriculo.foto;
 // Formação
 const formacao = document.getElementById("formacao");
 curriculo.formacao.forEach(item => {
-  const li = document.createElement("li");
-  li.textContent = item;
-  formacao.appendChild(li);
+  const p = document.createElement("p");
+  p.className = "item-menor";
+  p.textContent = `• ${item}`;
+  formacao.appendChild(p);
 });
 
 // Experiência profissional
 const experiencia = document.getElementById("experiencia");
 curriculo.experiencia.forEach(exp => {
-  const div = document.createElement("div");
+  const div = document.createElement("p");
   div.className = "item";
   div.innerHTML = `
     <strong>${exp.empresa}</strong>
-    ${exp.cargo} — ${exp.periodo}<br>
+    <span class="quote">${exp.cargo} — ${exp.periodo}</span><br>
     ${exp.descricao}
   `;
   experiencia.appendChild(div);
@@ -27,11 +28,11 @@ curriculo.experiencia.forEach(exp => {
 // Extracurricular
 const extra = document.getElementById("extra");
 curriculo.extracurricular.forEach(ex => {
-  const div = document.createElement("div");
+  const div = document.createElement("p");
   div.className = "item";
   div.innerHTML = `
     <strong>${ex.titulo}</strong>
-    ${ex.periodo}<br>
+    <span class="quote">${ex.periodo}</span><br>
     ${ex.descricao}
   `;
   extra.appendChild(div);
@@ -40,32 +41,41 @@ curriculo.extracurricular.forEach(ex => {
 // Marcos
 const marcos = document.getElementById("marcos");
 curriculo.marcos.forEach(m => {
-  const li = document.createElement("li");
-  li.textContent = m;
-  marcos.appendChild(li);
+  const p = document.createElement("p");
+  p.className = "item-menor-bullet"
+  p.textContent =  `• ${m};`;
+  marcos.appendChild(p);
 });
 
 // Habilidades
 const habilidades = document.getElementById("habilidades");
 curriculo.habilidades.forEach(h => {
-  const li = document.createElement("li");
-  li.textContent = h;
-  habilidades.appendChild(li);
+  const p = document.createElement("p");
+  p.className = "item-menor-bullet"
+  p.textContent = `- ${h};`;
+  habilidades.appendChild(p);
 });
 
 // Exportar PDF
 document.getElementById("btn-pdf").addEventListener("click", () => {
   window.scrollTo(0, 0);
-  setTimeout(() => {
+  /*setTimeout(() => {
     html2pdf()
       .set({
         margin: 10,
         filename: "Curriculo_Joao_Gabriel.pdf",
-        image: { type: 'jpg', quality: 1 },
+        image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2 },
-      jsPDF: { format: "a4", orientation: "portrait" }
-    })
+        jsPDF: {
+            unit: "mm",
+            format: "a4",
+            orientation: "portrait",
+            compress: true
+        },
+        pagebreak: { avoid: 'p' }
+      })
     .from(document.getElementById("curriculo"))
     .save();
-  }, 610);
+  }, 610);*/
+  window.print();
 });
