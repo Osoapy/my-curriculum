@@ -15,11 +15,14 @@
   </head>
 <body>
 
-  <button id="btn-pdf">Exportar para PDF</button>
+  <div class="acoes" aria-label="Ações do currículo">
+    <button id="btn-idioma" type="button">EN-EU</button>
+    <button id="btn-pdf" type="button">Exportar para PDF</button>
+  </div>
 
   <main id="curriculo">
     <section class="header">
-      <img id="foto" src="./outros/foto.png" />
+      <img id="foto" src="./foto.png" alt="" />
       <div class="gap20">
         <h1 id="nome" class="opensansextrabold"></h1>
         <p id="info"></p>
@@ -27,27 +30,27 @@
     </section>
 
     <section>
-      <h2 class="opensansextrabold">Formação Acadêmica</h2>
+      <h2 class="opensansextrabold" data-secao="formacao"></h2>
       <div id="formacao"></div>
     </section>
 
     <section>
-      <h2 class="opensansextrabold">Experiência Profissional</h2>
+      <h2 class="opensansextrabold" data-secao="experiencia"></h2>
       <div id="experiencia"></div>
     </section>
 
     <section>
-      <h2 class="opensansextrabold">Experiência Extracurricular</h2>
+      <h2 class="opensansextrabold" data-secao="extracurricular"></h2>
       <div id="extra"></div>
     </section>
 
-    <section>
-      <h2 class="opensansextrabold">Marcos Extracurriculares</h2>
+    <section class="secao-marcos">
+      <h2 class="opensansextrabold" data-secao="marcos"></h2>
       <div id="marcos"></div>
     </section>
 
     <section>
-      <h2 class="opensansextrabold">Habilidades</h2>
+      <h2 class="opensansextrabold" data-secao="habilidades"></h2>
       <div id="habilidades"></div>
     </section>
   </main>
