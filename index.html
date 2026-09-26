@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Currículo - João Gabriel</title>
   <link rel="stylesheet" href="./styles.css">
-  <link rel="icon" href="./icon.png" type="image/x-icon">
+  <link rel="icon" href="./assets/icon.png" type="image/png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
   </style>
@@ -21,38 +21,47 @@
   </div>
 
   <main id="curriculo">
-    <section class="header">
-      <img id="foto" src="./foto.png" alt="" />
-      <div class="gap20">
-        <h1 id="nome" class="opensansextrabold"></h1>
-        <p id="info"></p>
-      </div>
-    </section>
+    <article class="pagina">
+      <section class="header">
+        <img id="foto" src="./assets/foto.png" alt="" />
+        <div class="gap20">
+          <h1 id="nome" class="opensansextrabold"></h1>
+          <p id="info"></p>
+        </div>
+      </section>
 
-    <section>
-      <h2 class="opensansextrabold" data-secao="formacao"></h2>
-      <div id="formacao"></div>
-    </section>
+      <section>
+        <h2 class="opensansextrabold" data-secao="formacao"></h2>
+        <div id="formacao"></div>
+      </section>
 
-    <section>
-      <h2 class="opensansextrabold" data-secao="experiencia"></h2>
-      <div id="experiencia"></div>
-    </section>
+      <section>
+        <h2 class="opensansextrabold" data-secao="links"></h2>
+        <div id="links"></div>
+      </section>
 
-    <section>
-      <h2 class="opensansextrabold" data-secao="extracurricular"></h2>
-      <div id="extra"></div>
-    </section>
+      <section>
+        <h2 class="opensansextrabold" data-secao="experiencia"></h2>
+        <div id="experiencia"></div>
+      </section>
+    </article>
 
-    <section class="secao-marcos">
-      <h2 class="opensansextrabold" data-secao="marcos"></h2>
-      <div id="marcos"></div>
-    </section>
+    <article class="pagina">
+      <section>
+        <h2 class="opensansextrabold" data-secao="extracurricular"></h2>
+        <div id="extra"></div>
+      </section>
 
-    <section>
-      <h2 class="opensansextrabold" data-secao="habilidades"></h2>
-      <div id="habilidades"></div>
-    </section>
+      <section>
+        <h2 class="opensansextrabold" data-secao="marcosTecnicos"></h2>
+        <div id="marcos-tecnicos"></div>
+      </section>
+
+      <section>
+        <h2 class="opensansextrabold" data-secao="habilidades"></h2>
+        <div id="habilidades"></div>
+      </section>
+    </article>
   </main>
 
   <script src="./dataBebel.js"></script>
