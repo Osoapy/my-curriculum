@@ -1,5 +1,5 @@
 const ids = id => document.getElementById(id);
-const containers = ["formacao", "links", "experiencia", "extra", "marcos-tecnicos", "habilidades"].map(ids);
+const containers = ["resumo", "formacao", "links", "experiencia", "extra", "marcos-tecnicos", "habilidades"].map(ids);
 const viewsValidas = ["dev", "ui-ux", "tudo"];
 const viewInformada = new URLSearchParams(window.location.search).get("view");
 const view = viewsValidas.includes(viewInformada) ? viewInformada : "dev";
@@ -69,6 +69,10 @@ function renderizar() {
   ids("btn-pdf").textContent = configuracao.exportar;
   ids("btn-idioma").textContent = configuracao.alternativo;
   containers.forEach(container => container.replaceChildren());
+  const resumo = document.createElement("p");
+  resumo.className = "item resumo-profissional";
+  textoFormatado(resumo, curriculo.resumos[view]);
+  ids("resumo").append(resumo);
   curriculo.formacao.forEach(item => itemLista(ids("formacao"), item, "item-menor", "• "));
   curriculo.links.forEach(item => itemLista(ids("links"), item, "item-menor-bullet", "• "));
   itensVisiveis(curriculo.experiencia).forEach(item => itemExperiencia(ids("experiencia"), item, "empresa"));
