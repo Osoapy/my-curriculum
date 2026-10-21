@@ -1,5 +1,5 @@
 const ids = id => document.getElementById(id);
-const containers = ["resumo", "formacao", "links", "experiencia", "extra", "marcos-tecnicos", "habilidades"].map(ids);
+const containers = ["formacao", "links", "experiencia", "extra", "marcos-tecnicos", "hard-skills", "soft-skills"].map(ids);
 const viewsValidas = ["dev", "ui-ux", "tudo"];
 const viewInformada = new URLSearchParams(window.location.search).get("view");
 const view = viewsValidas.includes(viewInformada) ? viewInformada : "dev";
@@ -56,29 +56,33 @@ function itemExperiencia(container, item, titulo) {
 
 const itensVisiveis = itens => itens.filter(item => !item.views || item.views.includes(view));
 
+function calcularIdade(dataNascimento, hoje = new Date()) {
+  const [ano, mes, dia] = dataNascimento.split("-").map(Number);
+  const aniversarioAindaNaoChegou = hoje.getMonth() + 1 < mes
+    || (hoje.getMonth() + 1 === mes && hoje.getDate() < dia);
+  return hoje.getFullYear() - ano - Number(aniversarioAindaNaoChegou);
+}
+
 function renderizar() {
   const configuracao = curriculos[idioma];
   const curriculo = configuracao.dados;
   document.documentElement.lang = idioma;
   document.title = configuracao.titulo;
   ids("nome").textContent = curriculo.nome;
-  ids("info").innerHTML = curriculo.info;
+  ids("info").innerHTML = curriculo.info.replace("{idade}", calcularIdade(curriculo.dataNascimento));
   ids("foto").src = curriculo.foto;
   ids("foto").alt = `Foto de ${curriculo.nome}`;
   document.querySelectorAll("[data-secao]").forEach(titulo => titulo.textContent = configuracao.secoes[titulo.dataset.secao]);
   ids("btn-pdf").textContent = configuracao.exportar;
   ids("btn-idioma").textContent = configuracao.alternativo;
   containers.forEach(container => container.replaceChildren());
-  const resumo = document.createElement("p");
-  resumo.className = "item resumo-profissional";
-  textoFormatado(resumo, curriculo.resumos[view]);
-  ids("resumo").append(resumo);
   curriculo.formacao.forEach(item => itemLista(ids("formacao"), item, "item-menor", "• "));
   curriculo.links.forEach(item => itemLista(ids("links"), item, "item-menor-bullet", "• "));
   itensVisiveis(curriculo.experiencia).forEach(item => itemExperiencia(ids("experiencia"), item, "empresa"));
   itensVisiveis(curriculo.extracurricular).forEach(item => itemExperiencia(ids("extra"), item, "titulo"));
   itensVisiveis(curriculo.marcos).forEach(item => itemLista(ids("marcos-tecnicos"), item, "item-menor-bullet", "• ", "."));
-  itensVisiveis(curriculo.habilidades).forEach(item => itemLista(ids("habilidades"), item, "item-menor-bullet", "• ", ";"));
+  curriculo.hardSkills.forEach(item => itemLista(ids("hard-skills"), item, "item-menor-bullet", "• ", ";"));
+  curriculo.softSkills.forEach(item => itemLista(ids("soft-skills"), item, "item-menor-bullet", "• ", ";"));
   document.querySelectorAll(".pagina section").forEach(secao => {
     const conteudo = secao.querySelector("div[id]");
     secao.hidden = conteudo ? !conteudo.children.length : false;
